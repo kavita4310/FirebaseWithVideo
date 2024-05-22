@@ -17,23 +17,34 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sB5-gz-kmh">
-                        <rect key="frame" x="0.0" y="0.0" width="226" height="280"/>
+                        <rect key="frame" x="0.0" y="5" width="226" height="270"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qki-Bw-1zz">
-                                <rect key="frame" x="15" y="15" width="196" height="250"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-yallagan-white" translatesAutoresizingMaskIntoConstraints="NO" id="qki-Bw-1zz">
+                                <rect key="frame" x="15" y="15" width="196" height="240"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61q-gm-qn5">
-                                <rect key="frame" x="155.66666666666666" y="225" width="55.333333333333343" height="35"/>
+                                <rect key="frame" x="155.66666666666666" y="215" width="55.333333333333343" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title=" "/>
                                 <connections>
                                     <action selector="btnLike:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bSA-vv-8qv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1q-wH-kB9">
+                                <rect key="frame" x="105.66666666666667" y="127.66666666666666" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="Z3a-uw-Z6e"/>
+                                    <constraint firstAttribute="width" constant="15" id="zWT-zc-Cc4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pause" title=" "/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.9012186150469389" green="0.96078431610000004" blue="0.97647058959999999" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="p1q-wH-kB9" firstAttribute="centerX" secondItem="qki-Bw-1zz" secondAttribute="centerX" id="5zb-WA-KPB"/>
                             <constraint firstAttribute="bottom" secondItem="qki-Bw-1zz" secondAttribute="bottom" constant="15" id="F9v-zt-8uK"/>
+                            <constraint firstItem="p1q-wH-kB9" firstAttribute="centerY" secondItem="qki-Bw-1zz" secondAttribute="centerY" id="Iw1-zf-W1f"/>
                             <constraint firstItem="61q-gm-qn5" firstAttribute="bottom" secondItem="qki-Bw-1zz" secondAttribute="bottom" constant="-5" id="RhZ-kx-MVh"/>
                             <constraint firstAttribute="trailing" secondItem="qki-Bw-1zz" secondAttribute="trailing" constant="15" id="SBt-YP-c5a"/>
                             <constraint firstItem="61q-gm-qn5" firstAttribute="trailing" secondItem="qki-Bw-1zz" secondAttribute="trailing" id="e3c-jC-LzT"/>
@@ -41,13 +52,18 @@
                             <constraint firstItem="qki-Bw-1zz" firstAttribute="leading" secondItem="sB5-gz-kmh" secondAttribute="leading" constant="15" id="nQ4-yz-qhY"/>
                             <constraint firstItem="qki-Bw-1zz" firstAttribute="centerX" secondItem="sB5-gz-kmh" secondAttribute="centerX" id="sss-MZ-VD6"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="sB5-gz-kmh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Pk2-WD-bkr"/>
-                    <constraint firstAttribute="bottom" secondItem="sB5-gz-kmh" secondAttribute="bottom" id="Wbw-XZ-GmJ"/>
-                    <constraint firstItem="sB5-gz-kmh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="k1F-dz-7u2"/>
+                    <constraint firstAttribute="bottom" secondItem="sB5-gz-kmh" secondAttribute="bottom" constant="5" id="Wbw-XZ-GmJ"/>
+                    <constraint firstItem="sB5-gz-kmh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="k1F-dz-7u2"/>
                     <constraint firstAttribute="trailing" secondItem="sB5-gz-kmh" secondAttribute="trailing" id="y2H-3W-uln"/>
                 </constraints>
             </tableViewCellContentView>
@@ -61,5 +77,7 @@
     </objects>
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="logo-yallagan-white" width="243" height="167"/>
+        <image name="pause" width="48" height="48"/>
     </resources>
 </document>

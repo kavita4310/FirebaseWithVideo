@@ -50,7 +50,7 @@
 		9DC9E2842BFCC83A005AD035 /* SplashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9E2832BFCC83A005AD035 /* SplashScreenVC.swift */; };
 		9DCBD6892BFDABC500D6B29C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9DCBD6882BFDABC500D6B29C /* SDWebImage */; };
 		9DCBD68B2BFDABC500D6B29C /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9DCBD68A2BFDABC500D6B29C /* SDWebImageMapKit */; };
-		BED012194BB9E8A6B5E87901 /* Pods_FirebaseSocialApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA89C6D8F0D05AA617FB35B5 /* Pods_FirebaseSocialApp.framework */; };
+		9DCBD68E2BFDDDF800D6B29C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9DCBD68D2BFDDDF800D6B29C /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,9 +103,9 @@
 				9DC0AD8C2BFD2FE800DAE046 /* FirebaseRemoteConfig in Frameworks */,
 				9DC0AD902BFD2FE800DAE046 /* FirebaseStorage in Frameworks */,
 				9DC0AD702BFD2FE800DAE046 /* FirebaseDatabase in Frameworks */,
+				9DCBD68E2BFDDDF800D6B29C /* Kingfisher in Frameworks */,
 				9DC0AD922BFD2FE800DAE046 /* FirebaseStorageCombine-Community in Frameworks */,
 				9DCBD6892BFDABC500D6B29C /* SDWebImage in Frameworks */,
-				BED012194BB9E8A6B5E87901 /* Pods_FirebaseSocialApp.framework in Frameworks */,
 				9DC0AD6A2BFD2FE800DAE046 /* FirebaseAuth in Frameworks */,
 				9DC0AD742BFD2FE800DAE046 /* FirebaseDynamicLinks in Frameworks */,
 				9DC0AD762BFD2FE800DAE046 /* FirebaseFirestore in Frameworks */,
@@ -261,6 +261,7 @@
 				9DC0AD932BFD2FE800DAE046 /* FirebaseVertexAI-Preview */,
 				9DCBD6882BFDABC500D6B29C /* SDWebImage */,
 				9DCBD68A2BFDABC500D6B29C /* SDWebImageMapKit */,
+				9DCBD68D2BFDDDF800D6B29C /* Kingfisher */,
 			);
 			productName = FirebaseSocialApp;
 			productReference = 9DC9E2602BFCB5DF005AD035 /* FirebaseSocialApp.app */;
@@ -293,6 +294,7 @@
 			packageReferences = (
 				9DC0AD5C2BFD2FE800DAE046 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				9DCBD6872BFDABC500D6B29C /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				9DCBD68C2BFDDDF800D6B29C /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 9DC9E2612BFCB5DF005AD035 /* Products */;
 			projectDirPath = "";
@@ -615,6 +617,14 @@
 				minimumVersion = 5.19.2;
 			};
 		};
+		9DCBD68C2BFDDDF800D6B29C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -767,6 +777,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9DCBD6872BFDABC500D6B29C /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImageMapKit;
+		};
+		9DCBD68D2BFDDDF800D6B29C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DCBD68C2BFDDDF800D6B29C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

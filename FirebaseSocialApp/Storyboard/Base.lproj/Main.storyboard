@@ -703,7 +703,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bi0-12-2JS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1267.9389312977098" y="-92.253521126760575"/>
+            <point key="canvasLocation" x="1273" y="-61"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="OLi-eP-q4w">
@@ -736,35 +736,49 @@
                                     <constraint firstAttribute="width" constant="100" id="ado-zi-ocn"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKU-Ud-Ade">
-                                <rect key="frame" x="338" y="84" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YI5-fK-kOE">
+                                <rect key="frame" x="353" y="91.666666666666671" width="35" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="gU7-yQ-q0r"/>
-                                    <constraint firstAttribute="height" constant="50" id="t3U-gV-01R"/>
+                                    <constraint firstAttribute="width" constant="35" id="A1Z-Bt-BDl"/>
+                                    <constraint firstAttribute="height" constant="35" id="JDA-Fj-mE6"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="add" title=" "/>
+                                <buttonConfiguration key="configuration" style="plain" image="logout" title=" "/>
                                 <connections>
-                                    <action selector="btnUploadVieo:" destination="RDE-2Q-Vpy" eventType="touchUpInside" id="fJZ-vt-d3G"/>
+                                    <action selector="btnLogoutUser:" destination="RDE-2Q-Vpy" eventType="touchUpInside" id="VRe-IK-bZd"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qSg-Tq-Zwh">
                                 <rect key="frame" x="5" y="169" width="383" height="649"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKU-Ud-Ade">
+                                <rect key="frame" x="298" y="84" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="gU7-yQ-q0r"/>
+                                    <constraint firstAttribute="height" constant="50" id="t3U-gV-01R"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="addMore" title=" "/>
+                                <connections>
+                                    <action selector="btnUploadVieo:" destination="RDE-2Q-Vpy" eventType="touchUpInside" id="fJZ-vt-d3G"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xfC-ls-oTi"/>
                         <color key="backgroundColor" red="0.95686274770000002" green="0.96078431610000004" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="h7X-Xg-8ut" firstAttribute="leading" secondItem="506-zu-Syx" secondAttribute="leading" id="3XD-u0-Ama"/>
-                            <constraint firstItem="xfC-ls-oTi" firstAttribute="trailing" secondItem="HKU-Ud-Ade" secondAttribute="trailing" constant="5" id="3xN-sB-5X6"/>
                             <constraint firstAttribute="bottom" secondItem="h7X-Xg-8ut" secondAttribute="bottom" id="4Py-Wq-EwY"/>
                             <constraint firstItem="qSg-Tq-Zwh" firstAttribute="top" secondItem="45g-vB-5VF" secondAttribute="bottom" constant="10" id="9Zy-GQ-c9j"/>
                             <constraint firstItem="qSg-Tq-Zwh" firstAttribute="trailing" secondItem="h7X-Xg-8ut" secondAttribute="trailing" constant="-5" id="By3-Sf-msx"/>
                             <constraint firstItem="45g-vB-5VF" firstAttribute="top" secondItem="xfC-ls-oTi" secondAttribute="top" id="IC9-zZ-Fm8"/>
                             <constraint firstItem="TgS-F2-Rok" firstAttribute="top" secondItem="xfC-ls-oTi" secondAttribute="top" id="Rpc-KP-JgT"/>
+                            <constraint firstItem="xfC-ls-oTi" firstAttribute="trailing" secondItem="YI5-fK-kOE" secondAttribute="trailing" constant="5" id="Wak-ID-MaC"/>
+                            <constraint firstItem="YI5-fK-kOE" firstAttribute="leading" secondItem="HKU-Ud-Ade" secondAttribute="trailing" constant="5" id="Wja-XU-fhP"/>
                             <constraint firstItem="HKU-Ud-Ade" firstAttribute="centerY" secondItem="45g-vB-5VF" secondAttribute="centerY" id="boB-a5-A4G"/>
                             <constraint firstItem="h7X-Xg-8ut" firstAttribute="top" secondItem="506-zu-Syx" secondAttribute="top" constant="20" id="cjg-Jo-g0C"/>
+                            <constraint firstItem="YI5-fK-kOE" firstAttribute="centerY" secondItem="45g-vB-5VF" secondAttribute="centerY" id="di4-WT-Cde"/>
                             <constraint firstItem="45g-vB-5VF" firstAttribute="centerX" secondItem="xfC-ls-oTi" secondAttribute="centerX" id="hmD-YA-x7t"/>
                             <constraint firstItem="qSg-Tq-Zwh" firstAttribute="leading" secondItem="h7X-Xg-8ut" secondAttribute="leading" constant="5" id="hwT-LT-P9c"/>
                             <constraint firstAttribute="trailing" secondItem="h7X-Xg-8ut" secondAttribute="trailing" id="pGu-e0-Imx"/>
@@ -778,7 +792,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GHt-3f-ht4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2090.8396946564885" y="-94.366197183098592"/>
+            <point key="canvasLocation" x="2053" y="-61"/>
         </scene>
         <!--Splash ScreenVC-->
         <scene sceneID="gnL-4K-qC5">
@@ -892,11 +906,12 @@
     </scenes>
     <resources>
         <image name="PNG" width="242" height="167"/>
-        <image name="add" width="48" height="48"/>
+        <image name="addMore" width="48" height="48"/>
         <image name="arrow.left" catalog="system" width="128" height="95"/>
         <image name="facebook-1" width="320" height="320"/>
         <image name="google-1" width="1080" height="1080"/>
         <image name="lock" width="22" height="22"/>
+        <image name="logout" width="48" height="48"/>
         <image name="profile" width="62" height="62"/>
         <image name="sms" width="22" height="20"/>
         <image name="square" width="256" height="256"/>

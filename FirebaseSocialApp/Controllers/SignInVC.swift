@@ -10,31 +10,27 @@ import FirebaseAuth
 
 class SignInVC: UIViewController {
     
-    
+    //MARK: Outlets
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        txtEmail.text = "dipak@gmail.com"
-        txtPassword.text = "123456"
+
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        txtEmail.text = "dipak@gmail.com"
-//        txtPassword.text = "123456"
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        txtEmail.text = ""
+        txtPassword.text = ""
+    }
     
 
     @IBAction func btnBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
-    
+    //MARK: button Login
     @IBAction func btnLogin(_ sender: Any) {
         
         if txtEmail.text!.isEmpty && txtPassword.text!.isEmpty {
@@ -58,12 +54,14 @@ class SignInVC: UIViewController {
           } else {
             print("User signs up successfully")
               let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
-//              vc.loginEmail = self.txtEmail.text ?? ""
+              vc.loginUserEmail = self.txtEmail.text ?? ""
               self.navigationController?.pushViewController(vc, animated: true)
               
           }
         }
     }
+    
+    //MARK: butotn Google Site
     
     @IBAction func btnGoogle(_ sender: Any) {
 
@@ -76,7 +74,7 @@ class SignInVC: UIViewController {
             }
         }
     }
-    
+    //MARK: button Facebook Site
 
     @IBAction func btnFacebook(_ sender: Any) {
 
@@ -90,7 +88,7 @@ class SignInVC: UIViewController {
         }
     }
     
-    
+    //MARK: Button Sign 
     @IBAction func btnSignUP(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignUpVC") as! SignUpVC
         self.navigationController?.pushViewController(vc, animated: true)

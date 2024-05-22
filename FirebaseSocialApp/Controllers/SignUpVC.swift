@@ -12,39 +12,37 @@ import FirebaseAuth
 
 class SignUpVC: UIViewController{
     
-    
+    //MARK: Outlets
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var imgCheck: UIImageView!
     @IBOutlet weak var imgProfile: UIImageView!
     
+    //MARK: Properties
     let imagePicker = UIImagePickerController()
     var ref = DatabaseReference.init()
     var currentUserUid:String = ""
     var imgData:Data?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imagePicker.delegate = self
         self.ref = Database.database().reference()
-        
-    
     }
+
     
     @IBAction func btnBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
-    
-    
     @IBAction func btnSelectProfileImg(_ sender: Any) {
         choosePicture()
     }
     
-    
-    
+    //MARK: Button Term's Condition
     @IBAction func btncheck(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         if sender.isSelected{
@@ -54,7 +52,7 @@ class SignUpVC: UIViewController{
         }
     }
     
-    
+    //MARK: Button Signup
     @IBAction func btnSignUP(_ sender: Any) {
         
         if txtName.text!.isEmpty && txtEmail.text!.isEmpty && txtPassword.text!.isEmpty{
@@ -100,6 +98,7 @@ class SignUpVC: UIViewController{
         }
        
     }
+    
     
     //MARK: Function Register Data
     func registerUser(){

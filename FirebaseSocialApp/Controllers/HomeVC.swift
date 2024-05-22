@@ -16,21 +16,26 @@ import SDWebImage
 
 class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
    
-    
-    
-
+    //MARK: Outlets
     @IBOutlet weak var tableVw: UITableView!
     
+    //MARK: Properties
     var player: AVPlayer?
-     var playerLayer: AVPlayerLayer?
+    var playerLayer: AVPlayerLayer?
+    var playerViewcontroller = AVPlayerViewController()
     var videoUID:String = ""
     var videoList:[[String:Any]] = []
     var likeStatus:Bool = false
+    var loginUserEmail:String = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configuration()
+    }
+    
+   
+    func configuration(){
         fetchDatafromDatabase()
         tableVw.delegate = self
         tableVw.dataSource = self
@@ -44,7 +49,7 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     //MARK: Function FetchData from Database
     func fetchDatafromDatabase(){
         
-        let ref = Database.database().reference().child("Videos")
+        let ref = Database.database().reference().child("VideoUrl")
         
         ref.observeSingleEvent(of: .value) { (snapshot) in
             guard snapshot.exists() else {
@@ -65,12 +70,42 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         
     }
     
-    
-    
     @IBAction func btnBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
+    
+    
+    @IBAction func btnLogoutUser(_ sender: Any) {
+        deleteUser()
+    }
+    
+    //MARK: Function Delete User from Database
+    func deleteUser() {
+           guard let user = Auth.auth().currentUser else {
+               print("No user is logged in.")
+               return
+           }
+        if user.email == loginUserEmail {
+            user.delete { error in
+                if let error = error {
+                    // Handle error (e.g., re-authentication required)
+                    if let authError = error as NSError?, authError.code == AuthErrorCode.requiresRecentLogin.rawValue {
+                       
+                    } else {
+                        // Other errors
+                        print("Error deleting user: \(error.localizedDescription)")
+                    }
+                } else {
+                    print("User deleted successfully.")
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
+        }
+         
+       }
+    
+    //MARK: Button Upload Video
     
     @IBAction func btnUploadVieo(_ sender: Any) {
         let alert = UIAlertController(title: "Select Video", message: "Choose video source", preferredStyle: .actionSheet)
@@ -88,6 +123,7 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     self.present(alert, animated: true, completion: nil)
 }
     
+    //MARK: Function Open Video Gallery
     func openVideoPicker(sourceType: UIImagePickerController.SourceType) {
          if UIImagePickerController.isSourceTypeAvailable(sourceType) {
              let picker = UIImagePickerController()
@@ -101,6 +137,7 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
          }
      }
      
+    //MARK: Function Delegate Method of UIImage Picker
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         
@@ -109,13 +146,13 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
             do {
                 let videoData = try Data(contentsOf: videoURL)
                 // Call the function to upload video data to Firebase Storage
-                uploadImageToFirebaseStorage(videoData: videoData) { result in
+                uploadImageToFirebaseStorage(videoData: videoData) { [self] result in
                     switch result {
                     case .success(let downloadURL):
                         print("Video uploaded successfully: \(downloadURL)")
                         let ref = Database.database().reference()
-                        let uid = ref.child("VideoUrl").child(self.videoUID)
-                        let dict = ["url":"\(downloadURL)","like":false]
+                        let uid = ref.child("VideoUrl").child(videoUID)
+                        let dict = ["url":"\(downloadURL)","like":false,"uid":videoUID]
                         uid.setValue(dict)
                         DispatchQueue.main.async {
                             self.fetchDatafromDatabase()
@@ -140,7 +177,7 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
          var ref = Database.database().reference()
         let uid = ref.child("VideoUrl").childByAutoId()
          videoUID = uid.key ?? ""
-        let storageRef = Storage.storage().reference().child("Videos").child(videoUID)
+        let storageRef = Storage.storage().reference().child("VideoUrl").child(videoUID)
         
         let uploadTask = storageRef.putData(videoData, metadata: nil) { (metadata, error) in
             if let error = error {
@@ -167,10 +204,50 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         
     }
     
+    //MARK: Function Play Video
+    
+    func playVideo(videoUrl:String){
+        guard let url = URL(string: videoUrl) else {return}
+        player = AVPlayer(url: url)
+        playerViewcontroller.player = player
+        self.present(playerViewcontroller, animated: true)
+        self.playerViewcontroller.player?.play()
+    }
   
+    //MARK: Function Fetch and Update Like Status
+    func fetchUpdate<T>(key: String, value: T,uid:String) {
+        let ref = Database.database().reference().child("VideoUrl")
+
+        ref.observeSingleEvent(of: .value) { (snapshot) in
+            guard snapshot.exists() else {
+                print("No data available")
+                return
+            }
+            
+            for child in snapshot.children {
+                guard let childSnapshot = child as? DataSnapshot else { continue }
+                
+                if let userData = childSnapshot.value as? [String: Any] {
+                    if let email = userData["uid"] as? String, email == uid {
+                        let childKey = childSnapshot.key
+                        let userRef = ref.child(childKey)
+                        userRef.updateChildValues([key: value])
+                        DispatchQueue.main.async {
+                            self.fetchDatafromDatabase()
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    
     
     
 }
+
+//MARK: UITableView Delegate and Datasource
+
 extension HomeVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return videoList.count
@@ -178,70 +255,79 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VideoTCell", for: indexPath) as! VideoTCell
-        
-        if let imageUrlString = videoList[indexPath.row]["url"] as? String,
-                  let imageUrl = URL(string: imageUrlString) {
-                   cell.imgvideoList.sd_setImage(with: imageUrl, placeholderImage: UIImage(named: "Logo")) { (image, error, cacheType, url) in
-                       if let error = error {
-                           print("Error fetching image: \(error)")
+        cell.selectionStyle = .none
+        if let videoUrlString = videoList[indexPath.row]["url"] as? String,
+                  let videoUrl = URL(string: videoUrlString) {
+                   generateThumbnail(for: videoUrl) { (image) in
+                       DispatchQueue.main.async {
+                           cell.imgvideoList.image = image ?? UIImage(named: "logo-yallagan-white")
                        }
                    }
                } else {
-            
-                   cell.imgvideoList.image = UIImage(named: "Logo")
+                   cell.imgvideoList.image = UIImage(named: "logo-yallagan-white")
                }
         
         let likeUnlike = videoList[indexPath.row]["like"] as? Bool ?? false
-        if likeUnlike{
-            cell.btnLikeUnlike.layer.backgroundColor = UIColor.red.cgColor
-        }else{
-            cell.btnLikeUnlike.layer.backgroundColor = UIColor.white.cgColor
-        }
-        cell.btnLikeUnlike.tag = indexPath.row
+        cell.btnLikeUnlike.tintColor = likeUnlike ? UIColor.red : UIColor.black
+              
+        let tagValue = indexPath.section * 1000 + indexPath.row
+        cell.btnLikeUnlike.tag = tagValue
         cell.btnLikeUnlike.addTarget(self, action: #selector(actionWithParam(_:)), for: .touchUpInside)
         
         return cell
     }
     
+    //MARK: Function Generate Thumnail of Video
+    func generateThumbnail(for url: URL, completion: @escaping (UIImage?) -> Void) {
+           DispatchQueue.global().async {
+               let asset = AVAsset(url: url)
+               let assetImageGenerator = AVAssetImageGenerator(asset: asset)
+               assetImageGenerator.appliesPreferredTrackTransform = true
+               let time = CMTime(seconds: 2, preferredTimescale: 2)
+               
+               do {
+                   let imageRef = try assetImageGenerator.copyCGImage(at: time, actualTime: nil)
+                   let thumbnail = UIImage(cgImage: imageRef)
+                   completion(thumbnail)
+               } catch {
+                   print("Error generating thumbnail: \(error.localizedDescription)")
+                   completion(nil)
+               }
+           }
+       }
+    
+    //MARK: Button like Action
     @objc func actionWithParam(_ sender: UIButton) {
-        let index = sender.tag
+        let section = sender.tag / 1000
+        let row = sender.tag % 1000
+           let index = row
            var likeStatus = videoList[index]["like"] as? Bool ?? false
            likeStatus.toggle()
            videoList[index]["like"] = likeStatus
-           
+
            if likeStatus {
-               sender.layer.backgroundColor = UIColor.red.cgColor
+               sender.tintColor = UIColor.red
            } else {
-               sender.layer.backgroundColor = UIColor.white.cgColor
+               sender.tintColor = UIColor.black
            }
-           
-           updateLikeStatus(at: index, likeStatus: likeStatus)
-    }
-    
-    func updateLikeStatus(at index: Int, likeStatus: Bool) {
         
-           let ref = Database.database().reference()
-           let videoId = ref.child("VideoUrl").childByAutoId().key
-           if let videoId = videoList[index]["id"] as? String {
-               let likeStatusRef = ref.child("VideoUrl").child(videoId)
-               likeStatusRef.updateChildValues(["like": likeStatus]) { error, _ in
-                   if let error = error {
-                       print("Error updating like status: \(error)")
-                   } else {
-                       print("Successfully updated like status")
-                       DispatchQueue.main.async {
-                        self.fetchDatafromDatabase()
-                       }
-                      
-                   }
-               }
-           } else {
-               print("No valid video ID found for the video at index \(index)")
-           }
+        var uidata = videoList[index]["uid"] as? String ?? ""
+        
+        fetchUpdate(key: "like", value: likeStatus, uid: uidata)
+
        }
-   
+    
+    
+
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let videoUrlString = videoList[indexPath.row]["url"] as? String{
+            playVideo(videoUrl: videoUrlString)
+        }
     }
 }
