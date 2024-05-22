@@ -15,6 +15,8 @@ import SDWebImage
 
 
 class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+   
+    
     
 
     @IBOutlet weak var tableVw: UITableView!
@@ -23,6 +25,8 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
      var playerLayer: AVPlayerLayer?
     var videoUID:String = ""
     var videoList:[[String:Any]] = []
+    var likeStatus:Bool = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,7 +117,9 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
                         let uid = ref.child("VideoUrl").child(self.videoUID)
                         let dict = ["url":"\(downloadURL)","like":false]
                         uid.setValue(dict)
-                       
+                        DispatchQueue.main.async {
+                            self.fetchDatafromDatabase()
+                        }
                     case .failure(let error):
                         print("Error uploading video: \(error)")
                     }
@@ -161,6 +167,8 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         
     }
     
+  
+    
     
 }
 extension HomeVC: UITableViewDelegate, UITableViewDataSource{
@@ -170,6 +178,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VideoTCell", for: indexPath) as! VideoTCell
+        
         if let imageUrlString = videoList[indexPath.row]["url"] as? String,
                   let imageUrl = URL(string: imageUrlString) {
                    cell.imgvideoList.sd_setImage(with: imageUrl, placeholderImage: UIImage(named: "Logo")) { (image, error, cacheType, url) in
@@ -188,9 +197,49 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource{
         }else{
             cell.btnLikeUnlike.layer.backgroundColor = UIColor.white.cgColor
         }
+        cell.btnLikeUnlike.tag = indexPath.row
+        cell.btnLikeUnlike.addTarget(self, action: #selector(actionWithParam(_:)), for: .touchUpInside)
         
         return cell
     }
+    
+    @objc func actionWithParam(_ sender: UIButton) {
+        let index = sender.tag
+           var likeStatus = videoList[index]["like"] as? Bool ?? false
+           likeStatus.toggle()
+           videoList[index]["like"] = likeStatus
+           
+           if likeStatus {
+               sender.layer.backgroundColor = UIColor.red.cgColor
+           } else {
+               sender.layer.backgroundColor = UIColor.white.cgColor
+           }
+           
+           updateLikeStatus(at: index, likeStatus: likeStatus)
+    }
+    
+    func updateLikeStatus(at index: Int, likeStatus: Bool) {
+        
+           let ref = Database.database().reference()
+           let videoId = ref.child("VideoUrl").childByAutoId().key
+           if let videoId = videoList[index]["id"] as? String {
+               let likeStatusRef = ref.child("VideoUrl").child(videoId)
+               likeStatusRef.updateChildValues(["like": likeStatus]) { error, _ in
+                   if let error = error {
+                       print("Error updating like status: \(error)")
+                   } else {
+                       print("Successfully updated like status")
+                       DispatchQueue.main.async {
+                        self.fetchDatafromDatabase()
+                       }
+                      
+                   }
+               }
+           } else {
+               print("No valid video ID found for the video at index \(index)")
+           }
+       }
+   
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
