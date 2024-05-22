@@ -77,8 +77,24 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     
     @IBAction func btnLogoutUser(_ sender: Any) {
-        deleteUser()
+        showDeleteConfirmationAlert()
     }
+    
+    //MARK: Funtion Confirm Dialouge
+    func showDeleteConfirmationAlert() {
+           let alert = UIAlertController(title: "Delete Account", message: "Are you sure you want to delete your account?", preferredStyle: .alert)
+
+           let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+           alert.addAction(cancelAction)
+
+           let okAction = UIAlertAction(title: "OK", style: .destructive) { _ in
+               self.deleteUser()
+           }
+           alert.addAction(okAction)
+
+           present(alert, animated: true, completion: nil)
+       }
+    
     
     //MARK: Function Delete User from Database
     func deleteUser() {
