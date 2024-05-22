@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="62px" viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 2</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="signup-user" transform="translate(-157.000000, -211.000000)">
+            <g id="Group-2" transform="translate(158.000000, 212.000000)">
+                <circle id="Oval" stroke="#979797" fill="#F4F5F9" cx="30" cy="30" r="30"></circle>
+                <g id="frame" transform="translate(8.000000, 8.000000)">
+                    <path d="M28.7452423,7.26000007 C29.6252423,8.5616667 30.138576,10.1200001 30.138576,11.8066668 C30.1202427,16.2066669 26.6552425,19.7816665 22.291909,19.9283331 C22.1085756,19.9099998 21.8885758,19.9099998 21.6869091,19.9283331 C17.6352424,19.7999998 14.3535758,16.7016665 13.9135758,12.7416663 C13.3819092,8.02999977 17.2502423,3.66666667 21.9802422,3.66666667" id="Vector" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" fill-rule="nonzero"></path>
+                    <path d="M12.8164324,37.4549997 C17.8580991,40.8283331 26.1264337,40.8283331 31.1681004,37.4549997 C35.6047672,34.4849997 35.6047672,29.6450001 31.1681004,26.6933334 C26.1631003,23.3383334 17.8947657,23.3383334 12.8164324,26.6933334 C8.37976559,29.6633335 8.37976559,34.503333 12.8164324,37.4549997 Z" id="Vector" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" fill-rule="nonzero"></path>
+                    <path d="M44,0 L44,44 L0,44 L0,0 L44,0 Z" id="Vector" opacity="0"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

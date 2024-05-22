@@ -1,0 +1,16 @@
+PODS:
+  - RoundedUI (1.1.12)
+
+DEPENDENCIES:
+  - RoundedUI
+
+SPEC REPOS:
+  trunk:
+    - RoundedUI
+
+SPEC CHECKSUMS:
+  RoundedUI: 0d9a7805f08a88434406f5a5a44facdc5d1e3b5e
+
+PODFILE CHECKSUM: b43caff68d624d8dfc3d62c071677b64857f2548
+
+COCOAPODS: 1.12.0
