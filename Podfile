@@ -2,7 +2,8 @@
 # platform :ios, '9.0'
 
 target 'FirebaseSocialApp' do
-pod 'RoundedUI'
+  pod 'RoundedUI'
+  pod 'PKHUD'
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 

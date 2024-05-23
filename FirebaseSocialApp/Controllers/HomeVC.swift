@@ -64,6 +64,9 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
                     
                     self.videoList.append(userData)
                 }
+                DispatchQueue.main.async {
+                    Loader.hideLoader()
+                }
                 self.tableVw.reloadData()
             }
         }
@@ -125,33 +128,36 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     @IBAction func btnUploadVieo(_ sender: Any) {
         let alert = UIAlertController(title: "Select Video", message: "Choose video source", preferredStyle: .actionSheet)
-    
-    alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
-        self.openVideoPicker(sourceType: .photoLibrary)
-    }))
-    
-    alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
-        self.openVideoPicker(sourceType: .camera)
-    }))
-    
-    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-    
-    self.present(alert, animated: true, completion: nil)
-}
+              
+              alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
+                  self.openVideoPicker(sourceType: .photoLibrary)
+              }))
+              
+              alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
+                  self.openVideoPicker(sourceType: .camera)
+              }))
+              
+              alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+              
+              self.present(alert, animated: true, completion: nil)
+          }
     
     //MARK: Function Open Video Gallery
     func openVideoPicker(sourceType: UIImagePickerController.SourceType) {
-         if UIImagePickerController.isSourceTypeAvailable(sourceType) {
-             let picker = UIImagePickerController()
-             picker.delegate = self
-             picker.sourceType = sourceType
-             picker.mediaTypes = [kUTTypeMovie as String]
-             picker.allowsEditing = true
-             self.present(picker, animated: true, completion: nil)
-         }else{
-             print("Camera source not available")
-         }
-     }
+          if UIImagePickerController.isSourceTypeAvailable(sourceType) {
+              let picker = UIImagePickerController()
+              picker.delegate = self
+              picker.sourceType = sourceType
+              picker.mediaTypes = [UTType.movie.identifier]
+              picker.allowsEditing = true
+              self.present(picker, animated: true, completion: nil)
+          } else {
+              let alert = UIAlertController(title: "Warning", message: "Selected source is not available", preferredStyle: .alert)
+              alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+              self.present(alert, animated: true, completion: nil)
+          }
+      }
+
      
     //MARK: Function Delegate Method of UIImage Picker
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -162,6 +168,9 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
             do {
                 let videoData = try Data(contentsOf: videoURL)
                 // Call the function to upload video data to Firebase Storage
+                DispatchQueue.main.async {
+                    Loader.showLoader()
+                }
                 uploadImageToFirebaseStorage(videoData: videoData) { [self] result in
                     switch result {
                     case .success(let downloadURL):
@@ -328,7 +337,9 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource{
            }
         
         var uidata = videoList[index]["uid"] as? String ?? ""
-        
+        DispatchQueue.main.async {
+            Loader.showLoader()
+        }
         fetchUpdate(key: "like", value: likeStatus, uid: uidata)
 
        }

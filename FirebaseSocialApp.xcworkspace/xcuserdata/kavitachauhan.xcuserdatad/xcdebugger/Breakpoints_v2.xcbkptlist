@@ -14,38 +14,38 @@
             filePath = "FirebaseSocialApp/Controllers/SignUpVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "saveData()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "FB71321F-649D-4528-B7B7-4DC02E97FBF1 - 1ed35a0ade5c830"
+                  uuid = "FB71321F-649D-4528-B7B7-4DC02E97FBF1 - 326837fd6dda5aae"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "FirebaseSocialApp.SignUpVC.saveData() -&gt; ()"
                   moduleName = "FirebaseSocialApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kavitachauhan/Desktop/FirebaseVideoDemo/FirebaseWithVideo/FirebaseSocialApp/Controllers/SignUpVC.swift"
+                  urlString = "file:///Users/kavitachauhan/Desktop/FirebaseVideo/FirebaseWithVideo/FirebaseSocialApp/Controllers/SignUpVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75">
+                  startingLineNumber = "76"
+                  endingLineNumber = "76">
                </Location>
                <Location
-                  uuid = "FB71321F-649D-4528-B7B7-4DC02E97FBF1 - 59401ecff8f32e02"
+                  uuid = "FB71321F-649D-4528-B7B7-4DC02E97FBF1 - 6ac51c9238ccbc90"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Result&lt;Foundation.URL, Swift.Error&gt;) -&gt; () in FirebaseSocialApp.SignUpVC.saveData() -&gt; ()"
                   moduleName = "FirebaseSocialApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kavitachauhan/Desktop/FirebaseVideoDemo/FirebaseWithVideo/FirebaseSocialApp/Controllers/SignUpVC.swift"
+                  urlString = "file:///Users/kavitachauhan/Desktop/FirebaseVideo/FirebaseWithVideo/FirebaseSocialApp/Controllers/SignUpVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "76"
-                  endingLineNumber = "76">
+                  startingLineNumber = "77"
+                  endingLineNumber = "77">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -60,8 +60,8 @@
             filePath = "FirebaseSocialApp/Controllers/SignUpVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "registerUser()"
             landmarkType = "7">
          </BreakpointContent>
@@ -76,10 +76,58 @@
             filePath = "FirebaseSocialApp/Controllers/HomeVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
-            landmarkName = "HomeVC"
-            landmarkType = "3">
+            startingLineNumber = "258"
+            endingLineNumber = "258"
+            landmarkName = "fetchUpdate(key:value:uid:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E02010BD-35CD-4FCF-BB38-589207A4EC4E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FirebaseSocialApp/Controllers/HomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "btnUploadVieo(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2AB5D23B-B746-4998-ABD3-3B98AF9A7B7A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FirebaseSocialApp/Controllers/HomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "openVideoPicker(sourceType:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DE447DB8-C967-44B0-A457-3DA906433508"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FirebaseSocialApp/Controllers/HomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "openVideoPicker(sourceType:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

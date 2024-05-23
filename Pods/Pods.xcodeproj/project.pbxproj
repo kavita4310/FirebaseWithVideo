@@ -7,54 +7,147 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		011061726A5BF1222F045A4045858636 /* UIColor+Darker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D68C8116E1F38656B21AF8FE62402AD /* UIColor+Darker.swift */; };
-		239CE95DA21A7DEADC95CB4B4084021A /* AdvanceRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77494CC44F7A3B1A0DE26CAEE9BACE0F /* AdvanceRoundedView.swift */; };
-		30A5E6FAA52F481F1EDBAF8E1C51B42B /* CALayer+ArrangeSublayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8011D9A9542039A42E4D8D46CE2D4EA /* CALayer+ArrangeSublayers.swift */; };
-		69F95707CF0F02C84AB297A405F48D75 /* UIView+RoundedUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E4677EFC9F05396F5F89EC049355FF /* UIView+RoundedUI.swift */; };
-		6C846796D99EC3790E5473ED199DED12 /* UIBezierPath+RoundedRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C2CC8AB1D8ED2E2CE48DFCA1AB9ABD /* UIBezierPath+RoundedRect.swift */; };
-		760D8102C5875DA7BDA2FA111A6C9AA7 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968020383B2F86B19ACCAF3BAB294E6 /* RoundedView.swift */; };
-		A0C8B7F9AB06111AF1AC97E1988AD94F /* RoundedShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC0C977CB2A571DB35A697E9ABE766 /* RoundedShapeLayer.swift */; };
-		ADE3E8D8A7910E4FE80DB87408ADC814 /* AdvanceRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FECD617987204CCFE97A4429B1A88F3 /* AdvanceRoundedButton.swift */; };
-		C51B686FAD756638A6B64075BA7C8360 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F68492CD5B7A113A2A7E717C913A1C /* RoundedButton.swift */; };
-		CA6530A6E99B40B4D05A9515D95EBC3E /* RoundedUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E4FA37C47A0E76FA84F52FA33F914D60 /* RoundedUI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E82AD6B352CBC88413BB6F30A22D94AC /* SourceryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DCDBFE0EFE1BCAC5575E5C15D43820 /* SourceryProtocols.swift */; };
-		F27A1B10AD778794D800710C044C1B3E /* RoundedUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B222C37CD814EE22044A04D4E80E40 /* RoundedUI-dummy.m */; };
+		011061726A5BF1222F045A4045858636 /* UIColor+Darker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54751F2D5B1C3070B77CE1740AFD73 /* UIColor+Darker.swift */; };
+		09EE1BC2A0CC6A033CB7F5C8F8080483 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A138195847CB2609D22B78FEEDB95BB /* FrameView.swift */; };
+		1233D900C454B559F776D40C9DC5A23D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		1409D9CB66753D5C2E90FF9EA6B7AC40 /* PKHUDSquareBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40600E892FDB1BC609F81766CE3A76F /* PKHUDSquareBaseView.swift */; };
+		1CBFF17C08E2902C16435F1571183D7F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D012D96DB73DB9D46F26F4B8722E574 /* Images.xcassets */; };
+		1E589D08CB276548953C9FF2A685F130 /* PKHUDSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A1C3BC5B8F05353BE6F580DA6BA1F9 /* PKHUDSuccessView.swift */; };
+		239CE95DA21A7DEADC95CB4B4084021A /* AdvanceRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3C74243B9AF4372CD900C883445FD /* AdvanceRoundedView.swift */; };
+		30A5E6FAA52F481F1EDBAF8E1C51B42B /* CALayer+ArrangeSublayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD5875F1E460357DA1F8E98E0B9539A /* CALayer+ArrangeSublayers.swift */; };
+		333F62E2542F433813D4812D91EBC566 /* PKHUDAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D36CF20BCF6B25E27AF119A2A2E34A8 /* PKHUDAnimation.swift */; };
+		37AE9C7F421984AA8C7B6AEFF69B0BEB /* PKHUDSystemActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F66DEF8ABF3A98A67211CAEA0F94E2 /* PKHUDSystemActivityIndicatorView.swift */; };
+		42BE0FE120C46ACD08F40313ECF62602 /* PKHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 15CBBC2DEA60BEDD9887EA0268E51895 /* PKHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45CA8BE760F68692E034B1BF52DA4847 /* Pods-FirebaseSocialApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED02D2D272E7542E4BF49218D1C80C /* Pods-FirebaseSocialApp-dummy.m */; };
+		5B8E0518EE842922F5A03F19F0B22726 /* PKHUDWideBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5BABEB10F402FACB589EC2548FB93 /* PKHUDWideBaseView.swift */; };
+		5F01C54555E009F90253DD1C3E0F5198 /* PKHUDProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1CCE968B922F142D5A7B687A5B920E /* PKHUDProgressView.swift */; };
+		626560FCB1C4C562C117E742A6486A1E /* PKHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A91E38C3923EB369D14F8297B76F /* PKHUD.swift */; };
+		652A5783876A76F24CD10559F9317AEF /* PKHUDErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11450135709D108750992216E1EC08C3 /* PKHUDErrorView.swift */; };
+		69F95707CF0F02C84AB297A405F48D75 /* UIView+RoundedUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381E47911D00D5568CAAEBDE62B7ED2 /* UIView+RoundedUI.swift */; };
+		6C846796D99EC3790E5473ED199DED12 /* UIBezierPath+RoundedRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97929350A68F82C2F87AFD693F46321F /* UIBezierPath+RoundedRect.swift */; };
+		6FAB0F9EC2A22E3BD65C9EA8F78F74A2 /* PKHUDAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD03068C2C94BC6FE4683DF998377D5 /* PKHUDAssets.swift */; };
+		728592BA748BDFBE4C2ACE1ABE8A64FB /* PKHUDTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A422E61E429A8F95CF611CDE9C276 /* PKHUDTextView.swift */; };
+		760D8102C5875DA7BDA2FA111A6C9AA7 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD16C391EF47FEC14BE57FFA087B17F /* RoundedView.swift */; };
+		897FC477B696A506F03DBFEB46328D54 /* PKHUDAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C2AE1D376030EBA6953F20FC979597 /* PKHUDAnimating.swift */; };
+		89FFF72E1045E77A044AA0B79796AAB6 /* WindowRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D316301FC5FE8B4331385287D2F226F /* WindowRootViewController.swift */; };
+		A0C8B7F9AB06111AF1AC97E1988AD94F /* RoundedShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459D41C260D002158143C2CBE3A65E0 /* RoundedShapeLayer.swift */; };
+		A22FF8ABF41523D88E6C76202113F053 /* PKHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FEA0E0FFF69304AEA863BEBED468795 /* PKHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2E3B05C4F7DF7F764DE2735572C97F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		ADE3E8D8A7910E4FE80DB87408ADC814 /* AdvanceRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1723A09482D86E1E6A47B29EABAD2709 /* AdvanceRoundedButton.swift */; };
+		BCCED184234649D45324D05A872E9300 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B8D71DA225C0A42D961918B59D69B4 /* Window.swift */; };
+		C51B686FAD756638A6B64075BA7C8360 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB424C211F379C3BAA23E328AC83513 /* RoundedButton.swift */; };
+		CA6530A6E99B40B4D05A9515D95EBC3E /* RoundedUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CFBFA134681AD88762B3EB6390FE397D /* RoundedUI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF87B91415F61D83DE60044756ADA14A /* PKHUDRotatingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F736D80AC59216D00D18CB2A3C649C /* PKHUDRotatingImageView.swift */; };
+		D4868F4AA31A6BC54F7F901DD5BB19F7 /* PKHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A69BA63C6E1F65A6646BED1233713F52 /* PKHUD-dummy.m */; };
+		E82AD6B352CBC88413BB6F30A22D94AC /* SourceryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6581EAC26BF5EEA6EDE01C31C99FB92 /* SourceryProtocols.swift */; };
+		F27A1B10AD778794D800710C044C1B3E /* RoundedUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC45086F3EBB6552D154938F42976501 /* RoundedUI-dummy.m */; };
+		F376957848E8456F3A5490E9FA82D411 /* PKHUD-PKHUDResources in Resources */ = {isa = PBXBuildFile; fileRef = BFCB2D5C605270A32522299AED3B5AE6 /* PKHUD-PKHUDResources */; };
+		F570284C48519B446926CDA31235E47F /* Pods-FirebaseSocialApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F9510383A74FF584EDAE639C53D0FE5 /* Pods-FirebaseSocialApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7D131D397A88A94D6996AB978A96029 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		FECEA264ACF4ACA1F7C5401CE8E1A238 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CFE8251AD610768BF5D4612A0C4368 /* HUD.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		55D76840841FFEBFE8A1CD4F592DE361 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 364873017BA37260EF589D44B6B73D21;
+			remoteInfo = PKHUD;
+		};
+		78F1BC9404D400D557298F13A7CDE0BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BA544E6E9D3ACFBF01DD24853528D78;
+			remoteInfo = RoundedUI;
+		};
+		C0E0DD64579CEB1604899829644157C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7F7332F1050B42A501616421AC869EB;
+			remoteInfo = "PKHUD-PKHUDResources";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		045837D19FF3AD167848EE0550551B60 /* PKHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PKHUD.release.xcconfig; sourceTree = "<group>"; };
+		05A2656F46E8CA87E77A035911B33D10 /* PKHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06996A0E1935F6FA4ED328036AE75A17 /* Pods-FirebaseSocialApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FirebaseSocialApp.debug.xcconfig"; sourceTree = "<group>"; };
-		1EE31540561BEA667F8E453B609C6E0D /* RoundedUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RoundedUI.release.xcconfig; sourceTree = "<group>"; };
+		08B8D71DA225C0A42D961918B59D69B4 /* Window.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Window.swift; path = PKHUD/Window.swift; sourceTree = "<group>"; };
+		11450135709D108750992216E1EC08C3 /* PKHUDErrorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDErrorView.swift; path = PKHUD/PKHUDErrorView.swift; sourceTree = "<group>"; };
+		15CBBC2DEA60BEDD9887EA0268E51895 /* PKHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKHUD-umbrella.h"; sourceTree = "<group>"; };
+		1723A09482D86E1E6A47B29EABAD2709 /* AdvanceRoundedButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdvanceRoundedButton.swift; path = RoundedUI/Classes/AdvanceRoundedButton.swift; sourceTree = "<group>"; };
+		19FA04CC1787D4445884CF1B6F11009D /* Pods_FirebaseSocialApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseSocialApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D36CF20BCF6B25E27AF119A2A2E34A8 /* PKHUDAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDAnimation.swift; path = PKHUD/PKHUDAnimation.swift; sourceTree = "<group>"; };
+		20CFE8251AD610768BF5D4612A0C4368 /* HUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HUD.swift; path = PKHUD/HUD.swift; sourceTree = "<group>"; };
+		2AD16C391EF47FEC14BE57FFA087B17F /* RoundedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundedView.swift; path = RoundedUI/Classes/RoundedView.swift; sourceTree = "<group>"; };
 		2F9510383A74FF584EDAE639C53D0FE5 /* Pods-FirebaseSocialApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FirebaseSocialApp-umbrella.h"; sourceTree = "<group>"; };
+		3480A91E38C3923EB369D14F8297B76F /* PKHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUD.swift; path = PKHUD/PKHUD.swift; sourceTree = "<group>"; };
+		377B33401256B297B06023BEFFC0F6E3 /* RoundedUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RoundedUI.release.xcconfig; sourceTree = "<group>"; };
 		41D31D852EFBF5AB428C5F8882E58455 /* Pods-FirebaseSocialApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FirebaseSocialApp-Info.plist"; sourceTree = "<group>"; };
+		43A1C3BC5B8F05353BE6F580DA6BA1F9 /* PKHUDSuccessView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSuccessView.swift; path = PKHUD/PKHUDSuccessView.swift; sourceTree = "<group>"; };
+		4B88E3B7B10C926B8D9D0AC09AB21811 /* PKHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PKHUD.modulemap; sourceTree = "<group>"; };
+		5236D815295543CDCE1E671970D0F1F1 /* RoundedUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RoundedUI.modulemap; sourceTree = "<group>"; };
+		539D0B221BA6EF09CC6562F4869A0D14 /* RoundedUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RoundedUI.debug.xcconfig; sourceTree = "<group>"; };
+		5C54751F2D5B1C3070B77CE1740AFD73 /* UIColor+Darker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Darker.swift"; path = "RoundedUI/Classes/Utils/UIColor+Darker.swift"; sourceTree = "<group>"; };
+		5C9CC51B569AC53F5C931EBAFBCACC83 /* PKHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PKHUD.debug.xcconfig; sourceTree = "<group>"; };
+		5FEA0E0FFF69304AEA863BEBED468795 /* PKHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKHUD.h; path = PKHUD/PKHUD.h; sourceTree = "<group>"; };
+		63F66DEF8ABF3A98A67211CAEA0F94E2 /* PKHUDSystemActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSystemActivityIndicatorView.swift; path = PKHUD/PKHUDSystemActivityIndicatorView.swift; sourceTree = "<group>"; };
+		6A138195847CB2609D22B78FEEDB95BB /* FrameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameView.swift; path = PKHUD/FrameView.swift; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		77494CC44F7A3B1A0DE26CAEE9BACE0F /* AdvanceRoundedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdvanceRoundedView.swift; path = RoundedUI/Classes/AdvanceRoundedView.swift; sourceTree = "<group>"; };
-		77DCDBFE0EFE1BCAC5575E5C15D43820 /* SourceryProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourceryProtocols.swift; path = RoundedUI/Classes/SourceryProtocols.swift; sourceTree = "<group>"; };
+		798411C2E793FD3BF9693C00B100004B /* PKHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PKHUD-Info.plist"; sourceTree = "<group>"; };
+		7AC3C74243B9AF4372CD900C883445FD /* AdvanceRoundedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdvanceRoundedView.swift; path = RoundedUI/Classes/AdvanceRoundedView.swift; sourceTree = "<group>"; };
 		7EED02D2D272E7542E4BF49218D1C80C /* Pods-FirebaseSocialApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FirebaseSocialApp-dummy.m"; sourceTree = "<group>"; };
-		85CDBF5EEE8FF41A7C84281B196FDFB0 /* RoundedUI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RoundedUI-Info.plist"; sourceTree = "<group>"; };
-		8D68C8116E1F38656B21AF8FE62402AD /* UIColor+Darker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Darker.swift"; path = "RoundedUI/Classes/Utils/UIColor+Darker.swift"; sourceTree = "<group>"; };
-		93B222C37CD814EE22044A04D4E80E40 /* RoundedUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RoundedUI-dummy.m"; sourceTree = "<group>"; };
+		8D012D96DB73DB9D46F26F4B8722E574 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PKHUD/Images.xcassets; sourceTree = "<group>"; };
 		95081DEF075657CB244B4F8564717D83 /* Pods-FirebaseSocialApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FirebaseSocialApp.release.xcconfig"; sourceTree = "<group>"; };
-		9580F87E41D6F8DF217F05FDCC860AC4 /* RoundedUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RoundedUI.debug.xcconfig; sourceTree = "<group>"; };
+		97929350A68F82C2F87AFD693F46321F /* UIBezierPath+RoundedRect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIBezierPath+RoundedRect.swift"; path = "RoundedUI/Classes/Utils/UIBezierPath+RoundedRect.swift"; sourceTree = "<group>"; };
+		98C2AE1D376030EBA6953F20FC979597 /* PKHUDAnimating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDAnimating.swift; path = PKHUD/PKHUDAnimating.swift; sourceTree = "<group>"; };
 		9B32F7DD7A4B9531FC27F09CC940C38C /* Pods-FirebaseSocialApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FirebaseSocialApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9D316301FC5FE8B4331385287D2F226F /* WindowRootViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WindowRootViewController.swift; path = PKHUD/WindowRootViewController.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FECD617987204CCFE97A4429B1A88F3 /* AdvanceRoundedButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdvanceRoundedButton.swift; path = RoundedUI/Classes/AdvanceRoundedButton.swift; sourceTree = "<group>"; };
-		B9CC0C977CB2A571DB35A697E9ABE766 /* RoundedShapeLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundedShapeLayer.swift; path = RoundedUI/Classes/RoundedShapeLayer.swift; sourceTree = "<group>"; };
+		A1F736D80AC59216D00D18CB2A3C649C /* PKHUDRotatingImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDRotatingImageView.swift; path = PKHUD/PKHUDRotatingImageView.swift; sourceTree = "<group>"; };
+		A40600E892FDB1BC609F81766CE3A76F /* PKHUDSquareBaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSquareBaseView.swift; path = PKHUD/PKHUDSquareBaseView.swift; sourceTree = "<group>"; };
+		A6581EAC26BF5EEA6EDE01C31C99FB92 /* SourceryProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourceryProtocols.swift; path = RoundedUI/Classes/SourceryProtocols.swift; sourceTree = "<group>"; };
+		A69BA63C6E1F65A6646BED1233713F52 /* PKHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PKHUD-dummy.m"; sourceTree = "<group>"; };
+		A84A422E61E429A8F95CF611CDE9C276 /* PKHUDTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDTextView.swift; path = PKHUD/PKHUDTextView.swift; sourceTree = "<group>"; };
+		B177D86A1E4D7F24EA5478B6DE2905BC /* ResourceBundle-PKHUDResources-PKHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-PKHUDResources-PKHUD-Info.plist"; sourceTree = "<group>"; };
+		B459D41C260D002158143C2CBE3A65E0 /* RoundedShapeLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundedShapeLayer.swift; path = RoundedUI/Classes/RoundedShapeLayer.swift; sourceTree = "<group>"; };
+		B5980D0E20C1EDC2FEB6BC3780F1329D /* PKHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKHUD-prefix.pch"; sourceTree = "<group>"; };
+		BAD03068C2C94BC6FE4683DF998377D5 /* PKHUDAssets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDAssets.swift; path = PKHUD/PKHUDAssets.swift; sourceTree = "<group>"; };
+		BFCB2D5C605270A32522299AED3B5AE6 /* PKHUD-PKHUDResources */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "PKHUD-PKHUDResources"; path = PKHUDResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D6A8C8A96744DFB62B1EA563DB6595 /* Pods-FirebaseSocialApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FirebaseSocialApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		C1C89DDFDD7B05C15C3475F8E05A73F1 /* RoundedUI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RoundedUI-prefix.pch"; sourceTree = "<group>"; };
-		C9C2CC8AB1D8ED2E2CE48DFCA1AB9ABD /* UIBezierPath+RoundedRect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIBezierPath+RoundedRect.swift"; path = "RoundedUI/Classes/Utils/UIBezierPath+RoundedRect.swift"; sourceTree = "<group>"; };
-		E1EFAFA1DC2E10618A6AE3163F488D8A /* RoundedUI */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RoundedUI; path = RoundedUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2F68492CD5B7A113A2A7E717C913A1C /* RoundedButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundedButton.swift; path = RoundedUI/Classes/RoundedButton.swift; sourceTree = "<group>"; };
-		E3543E131761FBE0C8DD6BB27A3CCBCB /* RoundedUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RoundedUI.modulemap; sourceTree = "<group>"; };
-		E4FA37C47A0E76FA84F52FA33F914D60 /* RoundedUI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RoundedUI-umbrella.h"; sourceTree = "<group>"; };
-		E8011D9A9542039A42E4D8D46CE2D4EA /* CALayer+ArrangeSublayers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CALayer+ArrangeSublayers.swift"; path = "RoundedUI/Classes/Utils/CALayer+ArrangeSublayers.swift"; sourceTree = "<group>"; };
-		E968020383B2F86B19ACCAF3BAB294E6 /* RoundedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundedView.swift; path = RoundedUI/Classes/RoundedView.swift; sourceTree = "<group>"; };
+		C381E47911D00D5568CAAEBDE62B7ED2 /* UIView+RoundedUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+RoundedUI.swift"; path = "RoundedUI/Classes/UIView+RoundedUI.swift"; sourceTree = "<group>"; };
+		CF1CCE968B922F142D5A7B687A5B920E /* PKHUDProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDProgressView.swift; path = PKHUD/PKHUDProgressView.swift; sourceTree = "<group>"; };
+		CFBFA134681AD88762B3EB6390FE397D /* RoundedUI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RoundedUI-umbrella.h"; sourceTree = "<group>"; };
+		DCA8B4C5EF3546DEC3EF22EB6F751FE3 /* RoundedUI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RoundedUI-prefix.pch"; sourceTree = "<group>"; };
+		E1EFAFA1DC2E10618A6AE3163F488D8A /* RoundedUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RoundedUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8D5BABEB10F402FACB589EC2548FB93 /* PKHUDWideBaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDWideBaseView.swift; path = PKHUD/PKHUDWideBaseView.swift; sourceTree = "<group>"; };
+		EAB424C211F379C3BAA23E328AC83513 /* RoundedButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundedButton.swift; path = RoundedUI/Classes/RoundedButton.swift; sourceTree = "<group>"; };
+		EAD5875F1E460357DA1F8E98E0B9539A /* CALayer+ArrangeSublayers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CALayer+ArrangeSublayers.swift"; path = "RoundedUI/Classes/Utils/CALayer+ArrangeSublayers.swift"; sourceTree = "<group>"; };
 		EFFB25D31899F5ECC73C966FD1A7C906 /* Pods-FirebaseSocialApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FirebaseSocialApp.modulemap"; sourceTree = "<group>"; };
-		F3E4677EFC9F05396F5F89EC049355FF /* UIView+RoundedUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+RoundedUI.swift"; path = "RoundedUI/Classes/UIView+RoundedUI.swift"; sourceTree = "<group>"; };
+		F74BBBCFD6500B8B2CC9F29337359C6B /* RoundedUI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RoundedUI-Info.plist"; sourceTree = "<group>"; };
 		F891740AB134B6329D1FFF83FAC01FAC /* Pods-FirebaseSocialApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FirebaseSocialApp-frameworks.sh"; sourceTree = "<group>"; };
+		FC45086F3EBB6552D154938F42976501 /* RoundedUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RoundedUI-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		981D49EC59861195750C98C8A9494D6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2E3B05C4F7DF7F764DE2735572C97F1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0B4A8965CCAEEAC12E9E327C34C14A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACED72C2140FFB4CE966FFA47938B9C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,22 +156,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBE5265F94E454D72AEB6DE37B7E071D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1233D900C454B559F776D40C9DC5A23D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D7A74621114C9A20712CF84FEC004FF /* Support Files */ = {
+		1A24719C5EC518ED5EFD919CBFA0FCE9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E3543E131761FBE0C8DD6BB27A3CCBCB /* RoundedUI.modulemap */,
-				93B222C37CD814EE22044A04D4E80E40 /* RoundedUI-dummy.m */,
-				85CDBF5EEE8FF41A7C84281B196FDFB0 /* RoundedUI-Info.plist */,
-				C1C89DDFDD7B05C15C3475F8E05A73F1 /* RoundedUI-prefix.pch */,
-				E4FA37C47A0E76FA84F52FA33F914D60 /* RoundedUI-umbrella.h */,
-				9580F87E41D6F8DF217F05FDCC860AC4 /* RoundedUI.debug.xcconfig */,
-				1EE31540561BEA667F8E453B609C6E0D /* RoundedUI.release.xcconfig */,
+				5236D815295543CDCE1E671970D0F1F1 /* RoundedUI.modulemap */,
+				FC45086F3EBB6552D154938F42976501 /* RoundedUI-dummy.m */,
+				F74BBBCFD6500B8B2CC9F29337359C6B /* RoundedUI-Info.plist */,
+				DCA8B4C5EF3546DEC3EF22EB6F751FE3 /* RoundedUI-prefix.pch */,
+				CFBFA134681AD88762B3EB6390FE397D /* RoundedUI-umbrella.h */,
+				539D0B221BA6EF09CC6562F4869A0D14 /* RoundedUI.debug.xcconfig */,
+				377B33401256B297B06023BEFFC0F6E3 /* RoundedUI.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/RoundedUI";
+			sourceTree = "<group>";
+		};
+		2AE2609BBCCC0B521A98D09F8021DB8E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D012D96DB73DB9D46F26F4B8722E574 /* Images.xcassets */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -106,28 +215,40 @@
 			path = "Target Support Files/Pods-FirebaseSocialApp";
 			sourceTree = "<group>";
 		};
-		7D56828FA1A77EBB94B4969D0F28BFB7 /* RoundedUI */ = {
+		97A610C571C2758FF03DBDFA72A69846 /* RoundedUI */ = {
 			isa = PBXGroup;
 			children = (
-				9FECD617987204CCFE97A4429B1A88F3 /* AdvanceRoundedButton.swift */,
-				77494CC44F7A3B1A0DE26CAEE9BACE0F /* AdvanceRoundedView.swift */,
-				E8011D9A9542039A42E4D8D46CE2D4EA /* CALayer+ArrangeSublayers.swift */,
-				E2F68492CD5B7A113A2A7E717C913A1C /* RoundedButton.swift */,
-				B9CC0C977CB2A571DB35A697E9ABE766 /* RoundedShapeLayer.swift */,
-				E968020383B2F86B19ACCAF3BAB294E6 /* RoundedView.swift */,
-				77DCDBFE0EFE1BCAC5575E5C15D43820 /* SourceryProtocols.swift */,
-				C9C2CC8AB1D8ED2E2CE48DFCA1AB9ABD /* UIBezierPath+RoundedRect.swift */,
-				8D68C8116E1F38656B21AF8FE62402AD /* UIColor+Darker.swift */,
-				F3E4677EFC9F05396F5F89EC049355FF /* UIView+RoundedUI.swift */,
-				0D7A74621114C9A20712CF84FEC004FF /* Support Files */,
+				1723A09482D86E1E6A47B29EABAD2709 /* AdvanceRoundedButton.swift */,
+				7AC3C74243B9AF4372CD900C883445FD /* AdvanceRoundedView.swift */,
+				EAD5875F1E460357DA1F8E98E0B9539A /* CALayer+ArrangeSublayers.swift */,
+				EAB424C211F379C3BAA23E328AC83513 /* RoundedButton.swift */,
+				B459D41C260D002158143C2CBE3A65E0 /* RoundedShapeLayer.swift */,
+				2AD16C391EF47FEC14BE57FFA087B17F /* RoundedView.swift */,
+				A6581EAC26BF5EEA6EDE01C31C99FB92 /* SourceryProtocols.swift */,
+				97929350A68F82C2F87AFD693F46321F /* UIBezierPath+RoundedRect.swift */,
+				5C54751F2D5B1C3070B77CE1740AFD73 /* UIColor+Darker.swift */,
+				C381E47911D00D5568CAAEBDE62B7ED2 /* UIView+RoundedUI.swift */,
+				1A24719C5EC518ED5EFD919CBFA0FCE9 /* Support Files */,
 			);
 			path = RoundedUI;
 			sourceTree = "<group>";
 		};
-		7DBDA9FCF388B927F74EF894FDDF6E28 /* Products */ = {
+		B8A1E5F7EB25833C94DD66492B4BE8D4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E1EFAFA1DC2E10618A6AE3163F488D8A /* RoundedUI */,
+				CBAEB5841A6FA29AB16830332B43E1BB /* PKHUD */,
+				97A610C571C2758FF03DBDFA72A69846 /* RoundedUI */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C63BCDCA0A764CAABB1DE2DE70BA614E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05A2656F46E8CA87E77A035911B33D10 /* PKHUD.framework */,
+				BFCB2D5C605270A32522299AED3B5AE6 /* PKHUD-PKHUDResources */,
+				19FA04CC1787D4445884CF1B6F11009D /* Pods_FirebaseSocialApp.framework */,
+				E1EFAFA1DC2E10618A6AE3163F488D8A /* RoundedUI.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,13 +261,39 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		CBAEB5841A6FA29AB16830332B43E1BB /* PKHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6A138195847CB2609D22B78FEEDB95BB /* FrameView.swift */,
+				20CFE8251AD610768BF5D4612A0C4368 /* HUD.swift */,
+				5FEA0E0FFF69304AEA863BEBED468795 /* PKHUD.h */,
+				3480A91E38C3923EB369D14F8297B76F /* PKHUD.swift */,
+				98C2AE1D376030EBA6953F20FC979597 /* PKHUDAnimating.swift */,
+				1D36CF20BCF6B25E27AF119A2A2E34A8 /* PKHUDAnimation.swift */,
+				BAD03068C2C94BC6FE4683DF998377D5 /* PKHUDAssets.swift */,
+				11450135709D108750992216E1EC08C3 /* PKHUDErrorView.swift */,
+				CF1CCE968B922F142D5A7B687A5B920E /* PKHUDProgressView.swift */,
+				A1F736D80AC59216D00D18CB2A3C649C /* PKHUDRotatingImageView.swift */,
+				A40600E892FDB1BC609F81766CE3A76F /* PKHUDSquareBaseView.swift */,
+				43A1C3BC5B8F05353BE6F580DA6BA1F9 /* PKHUDSuccessView.swift */,
+				63F66DEF8ABF3A98A67211CAEA0F94E2 /* PKHUDSystemActivityIndicatorView.swift */,
+				A84A422E61E429A8F95CF611CDE9C276 /* PKHUDTextView.swift */,
+				E8D5BABEB10F402FACB589EC2548FB93 /* PKHUDWideBaseView.swift */,
+				08B8D71DA225C0A42D961918B59D69B4 /* Window.swift */,
+				9D316301FC5FE8B4331385287D2F226F /* WindowRootViewController.swift */,
+				2AE2609BBCCC0B521A98D09F8021DB8E /* Resources */,
+				F5F818B4DCD60ACF22A6B71C09C6AA2F /* Support Files */,
+			);
+			path = PKHUD;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				F9B3B14D45C8C3A067BEDB74816433CE /* Pods */,
-				7DBDA9FCF388B927F74EF894FDDF6E28 /* Products */,
+				B8A1E5F7EB25833C94DD66492B4BE8D4 /* Pods */,
+				C63BCDCA0A764CAABB1DE2DE70BA614E /* Products */,
 				C9D8188ACB1200ECB9D06F74BAB89FB8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -159,12 +306,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F9B3B14D45C8C3A067BEDB74816433CE /* Pods */ = {
+		F5F818B4DCD60ACF22A6B71C09C6AA2F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7D56828FA1A77EBB94B4969D0F28BFB7 /* RoundedUI */,
+				4B88E3B7B10C926B8D9D0AC09AB21811 /* PKHUD.modulemap */,
+				A69BA63C6E1F65A6646BED1233713F52 /* PKHUD-dummy.m */,
+				798411C2E793FD3BF9693C00B100004B /* PKHUD-Info.plist */,
+				B5980D0E20C1EDC2FEB6BC3780F1329D /* PKHUD-prefix.pch */,
+				15CBBC2DEA60BEDD9887EA0268E51895 /* PKHUD-umbrella.h */,
+				5C9CC51B569AC53F5C931EBAFBCACC83 /* PKHUD.debug.xcconfig */,
+				045837D19FF3AD167848EE0550551B60 /* PKHUD.release.xcconfig */,
+				B177D86A1E4D7F24EA5478B6DE2905BC /* ResourceBundle-PKHUDResources-PKHUD-Info.plist */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/PKHUD";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,9 +333,65 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6B284A3BD07FF13DB166DF10772382BB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A22FF8ABF41523D88E6C76202113F053 /* PKHUD.h in Headers */,
+				42BE0FE120C46ACD08F40313ECF62602 /* PKHUD-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF4EFDE2E395810634C09B5B9EC591FE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F570284C48519B446926CDA31235E47F /* Pods-FirebaseSocialApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		271175EC1BAD9392937E886B95A46C38 /* Pods-FirebaseSocialApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CED009D993DDC00CEC54451743F65C7F /* Build configuration list for PBXNativeTarget "Pods-FirebaseSocialApp" */;
+			buildPhases = (
+				CF4EFDE2E395810634C09B5B9EC591FE /* Headers */,
+				C6CAF78F0C5E2D4A216D3324137E174E /* Sources */,
+				DBE5265F94E454D72AEB6DE37B7E071D /* Frameworks */,
+				DC67B19A175F08C3033FA53463F2CC6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF40FDDDF41E1A58CA82953510356156 /* PBXTargetDependency */,
+				1AD716C88FFFC62CEBA39E3299B4C55E /* PBXTargetDependency */,
+			);
+			name = "Pods-FirebaseSocialApp";
+			productName = Pods_FirebaseSocialApp;
+			productReference = 19FA04CC1787D4445884CF1B6F11009D /* Pods_FirebaseSocialApp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		364873017BA37260EF589D44B6B73D21 /* PKHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47554B80CDED7BDD674F2225F226C431 /* Build configuration list for PBXNativeTarget "PKHUD" */;
+			buildPhases = (
+				6B284A3BD07FF13DB166DF10772382BB /* Headers */,
+				28235C60E4CC11FBD300DEFC8298B651 /* Sources */,
+				981D49EC59861195750C98C8A9494D6E /* Frameworks */,
+				73E323791D3C368C7E95A32AEA9C6BFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				075D512563FCA52D01A7CFB9BD74E931 /* PBXTargetDependency */,
+			);
+			name = PKHUD;
+			productName = PKHUD;
+			productReference = 05A2656F46E8CA87E77A035911B33D10 /* PKHUD.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		4BA544E6E9D3ACFBF01DD24853528D78 /* RoundedUI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEA89371D8D4E936A20A85A1DFA2664F /* Build configuration list for PBXNativeTarget "RoundedUI" */;
@@ -196,8 +407,25 @@
 			);
 			name = RoundedUI;
 			productName = RoundedUI;
-			productReference = E1EFAFA1DC2E10618A6AE3163F488D8A /* RoundedUI */;
+			productReference = E1EFAFA1DC2E10618A6AE3163F488D8A /* RoundedUI.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		A7F7332F1050B42A501616421AC869EB /* PKHUD-PKHUDResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFB6ADA14A8F40C4C6EDE745A035945A /* Build configuration list for PBXNativeTarget "PKHUD-PKHUDResources" */;
+			buildPhases = (
+				F5E4D9ED2C3195F193191D3DB75FF623 /* Sources */,
+				A0B4A8965CCAEEAC12E9E327C34C14A8 /* Frameworks */,
+				7640AEB8F3064F1B704FE2E182ACA338 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PKHUD-PKHUDResources";
+			productName = PKHUDResources;
+			productReference = BFCB2D5C605270A32522299AED3B5AE6 /* PKHUD-PKHUDResources */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -217,10 +445,13 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 7DBDA9FCF388B927F74EF894FDDF6E28 /* Products */;
+			productRefGroup = C63BCDCA0A764CAABB1DE2DE70BA614E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				364873017BA37260EF589D44B6B73D21 /* PKHUD */,
+				A7F7332F1050B42A501616421AC869EB /* PKHUD-PKHUDResources */,
+				271175EC1BAD9392937E886B95A46C38 /* Pods-FirebaseSocialApp */,
 				4BA544E6E9D3ACFBF01DD24853528D78 /* RoundedUI */,
 			);
 		};
@@ -234,9 +465,64 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		73E323791D3C368C7E95A32AEA9C6BFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F376957848E8456F3A5490E9FA82D411 /* PKHUD-PKHUDResources in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7640AEB8F3064F1B704FE2E182ACA338 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CBFF17C08E2902C16435F1571183D7F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC67B19A175F08C3033FA53463F2CC6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		28235C60E4CC11FBD300DEFC8298B651 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09EE1BC2A0CC6A033CB7F5C8F8080483 /* FrameView.swift in Sources */,
+				FECEA264ACF4ACA1F7C5401CE8E1A238 /* HUD.swift in Sources */,
+				626560FCB1C4C562C117E742A6486A1E /* PKHUD.swift in Sources */,
+				D4868F4AA31A6BC54F7F901DD5BB19F7 /* PKHUD-dummy.m in Sources */,
+				897FC477B696A506F03DBFEB46328D54 /* PKHUDAnimating.swift in Sources */,
+				333F62E2542F433813D4812D91EBC566 /* PKHUDAnimation.swift in Sources */,
+				6FAB0F9EC2A22E3BD65C9EA8F78F74A2 /* PKHUDAssets.swift in Sources */,
+				652A5783876A76F24CD10559F9317AEF /* PKHUDErrorView.swift in Sources */,
+				5F01C54555E009F90253DD1C3E0F5198 /* PKHUDProgressView.swift in Sources */,
+				CF87B91415F61D83DE60044756ADA14A /* PKHUDRotatingImageView.swift in Sources */,
+				1409D9CB66753D5C2E90FF9EA6B7AC40 /* PKHUDSquareBaseView.swift in Sources */,
+				1E589D08CB276548953C9FF2A685F130 /* PKHUDSuccessView.swift in Sources */,
+				37AE9C7F421984AA8C7B6AEFF69B0BEB /* PKHUDSystemActivityIndicatorView.swift in Sources */,
+				728592BA748BDFBE4C2ACE1ABE8A64FB /* PKHUDTextView.swift in Sources */,
+				5B8E0518EE842922F5A03F19F0B22726 /* PKHUDWideBaseView.swift in Sources */,
+				BCCED184234649D45324D05A872E9300 /* Window.swift in Sources */,
+				89FFF72E1045E77A044AA0B79796AAB6 /* WindowRootViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6CAF78F0C5E2D4A216D3324137E174E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45CA8BE760F68692E034B1BF52DA4847 /* Pods-FirebaseSocialApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECDC91B9E44459257759C54A831A2929 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -255,12 +541,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5E4D9ED2C3195F193191D3DB75FF623 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		075D512563FCA52D01A7CFB9BD74E931 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PKHUD-PKHUDResources";
+			target = A7F7332F1050B42A501616421AC869EB /* PKHUD-PKHUDResources */;
+			targetProxy = C0E0DD64579CEB1604899829644157C7 /* PBXContainerItemProxy */;
+		};
+		1AD716C88FFFC62CEBA39E3299B4C55E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RoundedUI;
+			target = 4BA544E6E9D3ACFBF01DD24853528D78 /* RoundedUI */;
+			targetProxy = 78F1BC9404D400D557298F13A7CDE0BE /* PBXContainerItemProxy */;
+		};
+		CF40FDDDF41E1A58CA82953510356156 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PKHUD;
+			target = 364873017BA37260EF589D44B6B73D21 /* PKHUD */;
+			targetProxy = 55D76840841FFEBFE8A1CD4F592DE361 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		06531ABECE5329DA2CA66D9215E2790E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9580F87E41D6F8DF217F05FDCC860AC4 /* RoundedUI.debug.xcconfig */;
+			baseConfigurationReference = 539D0B221BA6EF09CC6562F4869A0D14 /* RoundedUI.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -273,7 +587,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/RoundedUI/RoundedUI-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/RoundedUI/RoundedUI-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,6 +596,40 @@
 				MODULEMAP_FILE = "Target Support Files/RoundedUI/RoundedUI.modulemap";
 				PRODUCT_MODULE_NAME = RoundedUI;
 				PRODUCT_NAME = RoundedUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		07570E86E65836F20EB4DFEBC7B83183 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C9CC51B569AC53F5C931EBAFBCACC83 /* PKHUD.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PKHUD/PKHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PKHUD/PKHUD-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PKHUD/PKHUD.modulemap";
+				PRODUCT_MODULE_NAME = PKHUD;
+				PRODUCT_NAME = PKHUD;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -358,6 +706,23 @@
 			};
 			name = Debug;
 		};
+		5019553E4C934DF38DADF73F57C0D267 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 045837D19FF3AD167848EE0550551B60 /* PKHUD.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PKHUD";
+				IBSC_MODULE = PKHUD;
+				INFOPLIST_FILE = "Target Support Files/PKHUD/ResourceBundle-PKHUDResources-PKHUD-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = PKHUDResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		6F4225877C794ABEB78776F47754104E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -420,9 +785,98 @@
 			};
 			name = Release;
 		};
+		8EACA5EDFAA1E57BF1751EC94F0F7B95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 045837D19FF3AD167848EE0550551B60 /* PKHUD.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PKHUD/PKHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PKHUD/PKHUD-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PKHUD/PKHUD.modulemap";
+				PRODUCT_MODULE_NAME = PKHUD;
+				PRODUCT_NAME = PKHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9170C4319421F0A7F9D9679137540258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06996A0E1935F6FA4ED328036AE75A17 /* Pods-FirebaseSocialApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FirebaseSocialApp/Pods-FirebaseSocialApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FirebaseSocialApp/Pods-FirebaseSocialApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9A8EA4191CF6E612DBD9E888F47F3451 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C9CC51B569AC53F5C931EBAFBCACC83 /* PKHUD.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PKHUD";
+				IBSC_MODULE = PKHUD;
+				INFOPLIST_FILE = "Target Support Files/PKHUD/ResourceBundle-PKHUDResources-PKHUD-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = PKHUDResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		BA209B95F576DEDFAE5911C5BF613CE0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EE31540561BEA667F8E453B609C6E0D /* RoundedUI.release.xcconfig */;
+			baseConfigurationReference = 377B33401256B297B06023BEFFC0F6E3 /* RoundedUI.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -435,7 +889,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/RoundedUI/RoundedUI-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/RoundedUI/RoundedUI-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,14 +909,79 @@
 			};
 			name = Release;
 		};
+		D8FB79F523352C3302903561605E0053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95081DEF075657CB244B4F8564717D83 /* Pods-FirebaseSocialApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FirebaseSocialApp/Pods-FirebaseSocialApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FirebaseSocialApp/Pods-FirebaseSocialApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		47554B80CDED7BDD674F2225F226C431 /* Build configuration list for PBXNativeTarget "PKHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07570E86E65836F20EB4DFEBC7B83183 /* Debug */,
+				8EACA5EDFAA1E57BF1751EC94F0F7B95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				119D25BC8590F02A997CE3B28DA2EFA5 /* Debug */,
 				6F4225877C794ABEB78776F47754104E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CED009D993DDC00CEC54451743F65C7F /* Build configuration list for PBXNativeTarget "Pods-FirebaseSocialApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9170C4319421F0A7F9D9679137540258 /* Debug */,
+				D8FB79F523352C3302903561605E0053 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFB6ADA14A8F40C4C6EDE745A035945A /* Build configuration list for PBXNativeTarget "PKHUD-PKHUDResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A8EA4191CF6E612DBD9E888F47F3451 /* Debug */,
+				5019553E4C934DF38DADF73F57C0D267 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

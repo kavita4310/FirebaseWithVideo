@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 import FirebaseStorage
 import FirebaseAuth
+import PKHUD
 
 class SignUpVC: UIViewController{
     
@@ -69,7 +70,7 @@ class SignUpVC: UIViewController{
     
     //MARK: Function Save Data
     func saveData(){
-        
+
         if let image = imgData {
             
             uploadImageToFirebaseStorage(imageData: image) { result in
@@ -85,6 +86,9 @@ class SignUpVC: UIViewController{
                             print("Error uploading image: \(error)")
                            
                         }
+                DispatchQueue.main.async {
+                    Loader.hideLoader()
+                }
                 self.navigationController?.popViewController(animated: true)
                     }
   
@@ -93,6 +97,9 @@ class SignUpVC: UIViewController{
             var user = self.ref.child("Users").child(currentUserUid)
             let dict = ["name":self.txtName.text!,"email":self.txtEmail.text!]
             user.setValue(dict)
+            DispatchQueue.main.async {
+                Loader.hideLoader()
+            }
             self.navigationController?.popViewController(animated: true)
 
         }
@@ -102,6 +109,9 @@ class SignUpVC: UIViewController{
     
     //MARK: Function Register Data
     func registerUser(){
+        DispatchQueue.main.async {
+            Loader.showLoader()
+        }
         Auth.auth().createUser(withEmail: txtEmail.text ?? "", password: txtPassword.text ?? "") { authResult, error in
           if let error = error as? NSError {
               self.displayAlert(message: error.localizedFailureReason ?? error.localizedDescription)

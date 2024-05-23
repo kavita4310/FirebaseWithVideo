@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import PKHUD
 
 class SignInVC: UIViewController {
     
@@ -47,12 +48,18 @@ class SignInVC: UIViewController {
     
     //MARK: Function Login
     func loginUser(){
+        DispatchQueue.main.async {
+            Loader.showLoader()
+        }
         Auth.auth().signIn(withEmail: txtEmail.text ?? "", password: txtPassword.text ?? "") { (authResult, error) in
           if let error = error as? NSError {
               print("error",error.localizedFailureReason ?? "")
               self.displayAlert(message: error.localizedFailureReason ?? error.localizedDescription)
           } else {
             print("User signs up successfully")
+              DispatchQueue.main.async {
+                  Loader.hideLoader()
+              }
               let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
               vc.loginUserEmail = self.txtEmail.text ?? ""
               self.navigationController?.pushViewController(vc, animated: true)
